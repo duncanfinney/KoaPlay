@@ -33,19 +33,24 @@ app.get('/throwError', controller.throwError);
 app.get('/throwError2', controller.throwError2);
 
 //showing how policies would be made
-// var policies = function() {
-//   return [
-//     function*(next) {
-//       logger.info('middleware1');
-//       yield next;
-//     },
-//     function*(next) {
-//       logger.info('middleware2');
-//       yield next;
-//     }
-//   ];
-// }
-// app.get('/policiesTest', policies(), controller.get);
+var compose = require('koa-compose');
+var policies = function(opts) {
+  opts = opts || {};
+
+  return compose([
+    function*(next) {
+      logger.info('middleware1');
+      yield next;
+
+    },
+    function*(next) {
+      logger.info('middleware2');
+      yield next;
+    }
+  ]);
+
+};
+app.get('/policiesTest', compose([policies(), controller.get]));
 
 
 app.listen(3000);
