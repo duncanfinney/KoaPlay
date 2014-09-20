@@ -6,6 +6,7 @@
   "dependencies": {
     "koa": "^0.11.0",
     "koa-compose": "^2.3.0",
+    "koa-logger": "^1.2.2",
     "koa-router": "^3.4.0",
     "mongoose": "^3.8.16",
     "thunkify": "^2.1.2",

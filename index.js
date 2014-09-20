@@ -1,5 +1,7 @@
 var koa = require('koa');
 var router = require('koa-router');
+var koaLogger = require('koa-logger');
+
 var mongoose = require('mongoose');
 var logger = require('winston');
 var controller = require('./controllers/controller');
@@ -8,6 +10,7 @@ var app = koa();
 mongoose.connect('mongodb://localhost/test');
 
 //Middleware
+app.use(koaLogger());
 app.use(function *(next){
   //error handler 
   try {
