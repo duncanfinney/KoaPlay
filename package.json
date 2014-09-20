@@ -1,0 +1,23 @@
+{
+  "name": "KoaPlay",
+  "version": "0.0.0",
+  "description": "KoaPlay =======",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/duncanfinney/KoaPlay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duncanfinney/KoaPlay/issues"
+  },
+  "homepage": "https://github.com/duncanfinney/KoaPlay"
+}
